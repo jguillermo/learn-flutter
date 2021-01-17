@@ -59,4 +59,12 @@ class Pelicula {
     voteAverage = json['vote_average'] / 1;
     voteCount = json['vote_count'];
   }
+
+  getPosterImg() {
+    if (posterPath == null) {
+      return 'https://mip.gob.do/images/Viceministros/no-disponible.png';
+    } else {
+      return 'https://image.tmdb.org/t/p/w500/$posterPath';
+    }
+  }
 }
